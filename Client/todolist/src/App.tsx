@@ -1,30 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
 import "./App.css";
 import "./index.css";
 import SignIn from "./pages/signIn";
 import SignUp from "./pages/signUp";
-
-
-const color = "bg-indigo-200";
+import Image from "./img/darkForest.jpg";
 
 function App() {
   return (
-    <>
+    <section
+      className="fullscreen-bg"
+      style={{ background: `url(${Image})`, backgroundSize: "bg-auto", backgroundRepeat: "no-repeat"}}
+    >
       <div>
-        <div className={color}>
+        <div>
           <SignIn />
         </div>
       </div>
 
-      <br />
-      <hr />
-      <div className={color} >
+      {/* <div>
         <SignUp />
-      </div>
-
-      {/* <Test /> */}
-    </>
+      </div> */}
+      
+    </section>
   );
 }
 

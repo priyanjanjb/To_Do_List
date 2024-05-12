@@ -11,7 +11,7 @@ const color = "bg-indigo-200";
 function App() {
   return (
     <>
-      <div >
+      <div>
         <div className={color}>
           <SignIn />
         </div>

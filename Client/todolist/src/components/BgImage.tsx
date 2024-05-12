@@ -10,6 +10,7 @@ export default function BgImage({
     backgroundSize: "cover",
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center",
+    
   };
   return <div style={bgImage}>{children}</div>;
 }

@@ -4,24 +4,21 @@ import "./index.css";
 import SignIn from "./pages/signIn";
 import SignUp from "./pages/signUp";
 import Image from "./img/darkForest.jpg";
+import BgImage from "./components/BgImage";
 
 function App() {
   return (
-    <section
-      className="fullscreen-bg"
-      style={{ background: `url(${Image})`, backgroundSize: "bg-auto", backgroundRepeat: "no-repeat"}}
-    >
-      <div>
-        <div>
-          <SignIn />
-        </div>
-      </div>
-
-      {/* <div>
-        <SignUp />
-      </div> */}
+    <BgImage image={Image}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </BrowserRouter>
+    </BgImage>
+    
+    
       
-    </section>
   );
 }
 

@@ -12,5 +12,5 @@ export default function BgImage({
     backgroundPosition: "center",
     
   };
-  return <div style={bgImage}>{children}</div>;
+  return <div style={bgImage} className="fullscreen-bg">{children}</div>;
 }

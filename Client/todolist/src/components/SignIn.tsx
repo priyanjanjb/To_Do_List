@@ -17,16 +17,18 @@ export default function SignIn() {
       <BgBox>
         <Header title="Login" />
         <br />
-        <Input halder="Enter User Name" types="txt" /> <br />
-        <Input halder="Enter Password" types="password" /> <br />
-        <div className="flow-root">
+        <Input halder="Name" types="txt" /> <br />
+        <Input halder="Password" types="password" /> <br />
+        <div className="flow-root ">
           <p className="float-left ">
             <input type="checkbox" /> remember me{" "}
           </p>
-          <p className="text-right flex-auto">Forgot the password</p>
+          <p className="text-right flex-auto">
+            <a href="#">Forgot the password</a>
+          </p>
         </div>
-        <Button text="Login" onClick={handleSubmit} />
-        <div className="text-center">
+        <Button text="Login " onClick={handleSubmit} />
+        <div className="text-center my-1">
           Don't have an account ?{" "}
           <a href="http://localhost:5173/signup">Register</a>
         </div>

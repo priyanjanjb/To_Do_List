@@ -14,7 +14,7 @@ export default function Input({
        border-gray-400
        rounded-full py-2 px-7
       text-gray-100 leading-tight 
-        focus:outline-none focus:bg-cyan-200
+        focus:outline-none focus:bg-violet-200
         focus:border-purple-500
         focus:text-gray-500 bg-opacity-20
          "

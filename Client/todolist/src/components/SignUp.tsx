@@ -25,7 +25,8 @@ export default function SignUp() {
         <Input halder="Password" types="password" />
         <br />
         <Button text="Register" onClick={handleSubmit} />
-        <br />
+        
+        <p><a href="http://localhost:5173/" className="flow-root text-center my-1">Back to Login</a></p>
       </BgBox>
     </div>
   );

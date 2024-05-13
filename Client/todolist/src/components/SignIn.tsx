@@ -10,7 +10,7 @@ export default function SignIn() {
   const nextPage = useNavigate();
   function handleSubmit() {
     nextPage("/signup");
-    return null
+    return null;
   }
   return (
     <div id="signIn" className="py-20">
@@ -19,15 +19,17 @@ export default function SignIn() {
         <br />
         <Input halder="Enter User Name" types="txt" /> <br />
         <Input halder="Enter Password" types="password" /> <br />
-        <p>
-          <input type="checkbox" /> remember me{" "}
-        </p>
-        <p>Forgot the password</p>
+        <div className="flow-root">
+          <p className="float-left ">
+            <input type="checkbox" /> remember me{" "}
+          </p>
+          <p className="text-right flex-auto">Forgot the password</p>
+        </div>
         <Button text="Login" onClick={handleSubmit} />
-        <p>
+        <div className="text-center">
           Don't have an account ?{" "}
           <a href="http://localhost:5173/signup">Register</a>
-        </p>
+        </div>
         <br />
       </BgBox>
     </div>

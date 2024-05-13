@@ -10,8 +10,7 @@ export default function Input({
       <input
         type={types}
         placeholder={halder}
-        style={{ width: "100%" }}
-        className="bg-gray-700  border-2
+        className="w-full bg-gray-700  border-2
        border-gray-400
        rounded-full py-2 px-7
       text-gray-100 leading-tight 

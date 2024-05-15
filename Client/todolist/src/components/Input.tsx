@@ -1,23 +1,27 @@
 export default function Input({
   halder,
-  types,
+  type,
+  onChange,
+  value,
 }: {
   halder: string;
-  types: string;
+  type: string;
+  onChange: any;
+  value: string;
 }) {
   return (
     <div>
       <input
-        type={types}
+        type={type}
         placeholder={halder}
-        style={{ width: "400px" }}
-        className="bg-gray-700  border-2
+        onChange={onChange}
+        className="w-full bg-gray-700  border-2
        border-gray-400
-       rounded-full py-2 px-7
-        text-gray-100 leading-tight 
-        focus:outline-none focus:bg-cyan-200
-         focus:border-purple-500
-         focus:text-gray-500 bg-opacity-20
+       rounded-full py-2 px-7 my-2
+      text-gray-100 leading-tight 
+        focus:outline-none focus:bg-violet-200
+        focus:border-purple-500
+        focus:text-gray-500 bg-opacity-20
          "
       />
     </div>

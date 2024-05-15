@@ -1,4 +1,4 @@
-#root {
+/* #root {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
@@ -39,4 +39,12 @@
 
 .read-the-docs {
   color: #888;
+} */
+
+.fullscreen-bg {
+  height: 100vh; /* Full height */
+  width: 100vw; /* Full width */
+  background: url('./img/darkForest.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
+

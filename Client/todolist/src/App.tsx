@@ -3,6 +3,7 @@ import "./App.css";
 import "./index.css";
 import SignIn from "./pages/signIn";
 import SignUp from "./pages/signUp";
+import HomePage from "./pages/homaPage";
 import Image from "./img/darkForest.jpg";
 import BgImage from "./components/BgImage";
 
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route path = "/homepage" element={<HomePage/>}/>
         </Routes>
       </BrowserRouter>
     </BgImage>

@@ -2,10 +2,12 @@ export default function Input({
   halder,
   type,
   onChange,
+  value,
 }: {
   halder: string;
   type: string;
   onChange: any;
+  value: string;
 }) {
   return (
     <div>

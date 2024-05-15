@@ -4,6 +4,8 @@ import Input from "../components/Input";
 import BgBox from "./BgBox";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { auth } from "../firebase";
 
 export default function SignUp() {
   const history = useNavigate();
@@ -13,22 +15,57 @@ export default function SignUp() {
   const [password, setPassword] = useState("");
   const [retypePassword, setRetypePassword] = useState("");
 
-  function handleSubmit(e:any) {
-    e.preventDefault();
-    console.log("Name: " + name + " Email: " + email + " Phone: " + phone + " Password: " + password + " Retype Password: " + retypePassword);
-    
+  function handleSubmit(e: any) {
+    try {
+      e.preventDefault();
+      if (password !== retypePassword) {
+        alert("password not match");
+        return;
+      }
+
+      createUserWithEmailAndPassword(auth, email, password);
+      history("/");
+    } catch (e) {
+      alert("somthing went wrong");
+      console.log("somthing went wrong");
+    }
   }
 
   return (
     <div className="py-20">
       <BgBox>
         <Header title="Register" />
-        <Input halder="Name" type="txt" onChange={(e:any) =>setName(e.target.value)}/>
-        <Input halder="Email" type="txt" onChange={(e:any) =>setEmail(e.target.value)}/>
-        <Input halder="Phone Number" type="number"onChange={(e:any) =>setPhone(e.target.value)} />
-        <Input halder="Password" type="password" onChange={(e:any) =>setPassword(e.target.value)}/>
-        <Input halder="Retype Password" type="password" onChange={(e:any) =>setRetypePassword(e.target.value)}/>
-        <Button text="Register" type="submit" onClick={handleSubmit}/>
+        <Input
+          halder="Name"
+          type="txt"
+          value={name}
+          onChange={(e: any) => setName(e.target.value)}
+        />
+        <Input
+          halder="Email"
+          type="txt"
+          value={email}
+          onChange={(e: any) => setEmail(e.target.value)}
+        />
+        <Input
+          halder="Phone Number"
+          type="number"
+          value={phone}
+          onChange={(e: any) => setPhone(e.target.value)}
+        />
+        <Input
+          halder="Password"
+          type="password"
+          value={password}
+          onChange={(e: any) => setPassword(e.target.value)}
+        />
+        <Input
+          halder="Retype Password"
+          type="password"
+          value={retypePassword}
+          onChange={(e: any) => setRetypePassword(e.target.value)}
+        />
+        <Button text="Register" type="submit" onClick={handleSubmit} />
         <p>
           <a
             href="http://localhost:5173/"

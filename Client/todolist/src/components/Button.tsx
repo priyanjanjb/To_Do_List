@@ -12,9 +12,7 @@ export default function Button({
     onClick={onClick}
       className="w-full text-2xl bg-violet-500 hover:bg-violet-950 text-white font-bold py-2 px-4 rounded-full my-2"
       type ={type}
-      
       >
-      
       {text}
     </button>
   );

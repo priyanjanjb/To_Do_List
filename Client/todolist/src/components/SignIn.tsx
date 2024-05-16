@@ -7,6 +7,8 @@ import axios from "axios";
 import BgBox from "./BgBox";
 import {signInWithEmailAndPassword} from "firebase/auth";
 import {auth} from "../firebase";
+import Img from "../img/darkForest.jpg";
+import BgImage from "../components/BgImage";
 
 export default function SignIn() {
   const nextPage = useNavigate();
@@ -26,6 +28,7 @@ export default function SignIn() {
   }
 
   return (
+    <BgImage image={Img}>
     <div id="signIn" className="py-20">
       <BgBox>
         <Header title="Login" />
@@ -57,5 +60,6 @@ export default function SignIn() {
         <br />
       </BgBox>
     </div>
+    </BgImage>
   );
 }

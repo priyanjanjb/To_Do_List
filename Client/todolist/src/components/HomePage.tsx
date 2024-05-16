@@ -1,22 +1,30 @@
-import { useNavigate } from 'react-router-dom';
-import Button from './Button';
+import { useNavigate } from "react-router-dom";
+import Button from "./Button";
+import BgBox from "./BgBox";
+import BgImage from "./BgImage";
+import Img from "../img/leafe.jpg";
 export default function HomePage() {
-    const history = useNavigate();
+  const history = useNavigate();
 
-
-    function handleSubmit(){
-        history("/");
-        return console.log("Button Clicked");
-        
-
-        
-    }
-    return (
-        <div className="flex flex-col items-center justify-center h-screen bg-gray-800">
-            <h1 className="text-4xl font-bold text-indigo-100 text-center mb-2">
-                Welcome to the Home Page : it is under construction
-            </h1>
-            <Button text="back to ligin" type='submit' onClick={handleSubmit}/>
+  function handleSubmit() {
+    history("/");
+    return console.log("Button Clicked");
+  }
+  return (
+    <>
+    <BgImage image={Img}>
+    <BgBox>
+    <div className="mailBlock text-lime-400 flow-root">
+        <div className="leftBlock float-left w-20 bg-cyan-950">
+          <p>This is left side paragraph</p>
         </div>
-    );
+
+        <div className="rightBlock bg-blue-600">
+          <p>This is right side paragraph</p>
+        </div>
+      </div>
+    </BgBox>
+     </BgImage> 
+    </>
+  );
 }

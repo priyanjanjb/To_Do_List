@@ -1,13 +1,13 @@
-import Button from "../components/Button";
-import Header from "../components/Header";
-import Input from "../components/Input";
-import BgBox from "./BgBox";
+import Button from "./Button";
+import Header from "./Header";
+import Input from "./Input";
+import BgBox from "../common/BgBox";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
-import Img from "../img/darkForest.jpg";
-import BgImage from "../components/BgImage";
+import { auth } from "../../firebase";
+import Img from "../../img/darkForest.jpg";
+import BgImage from "../common/BgImage";
 
 export default function SignUp() {
   const history = useNavigate();
@@ -36,7 +36,7 @@ export default function SignUp() {
   return (
     <BgImage image={Img}>
       <div className="py-20">
-        <BgBox>
+        <BgBox RegOrLogForm={true}>
           <Header title="Register" />
           <Input
             halder="Name"

@@ -1,12 +1,12 @@
-import BgImage from "./BgImage";
+import BgImage from "../common/BgImage";
 import Img from "../img/leafe.jpg";
 export default function ProfileImage() {
   return (
     <>
-    <BgImage image={Img}>
+      <BgImage image={Img}>
         <h1>HEllo</h1>
         <p>asdasdasd</p>
-    </BgImage>
-  </>
+      </BgImage>
+    </>
   );
 }
